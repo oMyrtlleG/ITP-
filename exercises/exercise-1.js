@@ -39,7 +39,10 @@ console.log("Obtained Grade: ", grade);
 // Exercise 2 - Print Numbers in a Range
 
 let num1 = getInputNumber("Enter the starting number: ");
-let num2 = getInputNumber("Enter the ending number: ");
+let num2 = NaN
+do {
+    num2 = getInputNumber("Enter the ending number: ");
+} while (num2 == num1);
 
 for (let i = num1; i <= num2; i++) {
     console.log(i);
@@ -49,10 +52,7 @@ for (let i = num1; i <= num2; i++) {
 // Exercise 3 - Calculator Power
 
 let num3 = getInputNumber("Enter the base number: ");
-let num4 = NaN;
-do {
-    num4 = getInputNumber("Enter the exponent number: ");
-} while (num4 == num3);
+let num4 = getInputNumber("Enter the exponent number: ");
 
 let results = 1;
 for (let i = 1; i <= num4; i++) {
